@@ -1,0 +1,266 @@
+var Nombre = string;
+var Apellido = string;
+var Nombre_usuario__Platzi = string;
+var Edad = integer;
+var Correo_electronico = integer ;
+var Mayor_edad = booleano;
+var Dinero_ahorrado = decimal;
+var Deudas = decimal;
+
+
+console.log(Nombre+" "+Apellido);
+
+console.log(Dinero_ahorrado - Deudas);
+
+
+¿Qué es una función?
+- sentencias de codigo que pueden contener variables, metodos y operaciones, utiles para reutilizar codigo
+
+¿Cuándo me sirve usar una función en mi código?
+cuando quiero reutilizar codigo y compactar mejor las operaciones que estoy realizando
+
+¿Cuál es la diferencia entre parámetros y argumentos de una función?
+los parametros comunican el scope global y local de la variable con valores que se pasan en los llamados de las funciones
+
+
+¿Qué es una condicional?
+una bifurcacion u opcion entre multiples casos que pueden suceder
+
+¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+if y case switch y ternarios
+son muy similaers pero if permite realizar condicionales mas complejas que los case o switch
+
+¿Puedo combinar funciones y condicionales?
+claro que si
+
+
+2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
+
+
+const tipoDeSuscripcion = "basic";
+
+if (tipoDeSuscripcion == "Free") {
+
+    console.log("Solo puedes tomar los cursos gratis"); 
+    console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+
+}if (tipoDeSuscripcion == "Basic") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");    
+} else {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    
+}
+
+
+3️⃣ Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
+
+
+
+if (tipoDeSuscripcion == "Free") {
+    console.log("Solo puedes tomar los cursos gratis"); 
+    console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+}
+
+if (tipoDeSuscripcion == "Basic") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");    
+    
+}
+if (tipoDeSuscripcion == "Expert") {
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    
+}
+
+
+Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays y un solo condicional. 😏
+
+
+var arraycursetype = [
+    {
+        tipo        :   'Free',
+        mensaje     :   'Solo puedes tomar los cursos gratis, Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año'
+    },
+    {
+        tipo        :   'Basic',
+        mensaje     :   'Puedes tomar casi todos los cursos de Platzi durante un mes'
+
+    },
+    {
+        tipo        :   'Expert',
+        mensaje     :   'Puedes tomar casi todos los cursos de Platzi durante un año'
+
+    },
+];
+
+for (const value of arraycursetype) {
+    if (value.tipo) {
+        console.log('Tipo Plan - '+value.tipo +': '+ value.mensaje);
+    }
+}
+
+
+
+
+1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+¿Qué es un ciclo?
+- sentencia de codigo que se itera o repite si una condicion dada es valida
+
+
+¿Qué tipos de ciclos existen en JavaScript?
+- for, for of, foreach, while, dowhile.
+
+
+¿Qué es un ciclo infinito y por qué es un problema?
+- la misma definicion de ciclo pero en este caso la condicion para que se de es infinita no tiene una terminacion del ciclo
+su mayor complicacion es el consumo de recursos de la maquina donde se ejecuta que no se detiene
+
+¿Puedo mezclar ciclos y condicionales?
+- si claro
+
+
+2️⃣ Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+
+
+let i = 0; 
+while (i < 5) {
+    console.log("El valor de i es: " + i);    
+    i ++;
+}
+
+let i = 10;
+while (i >= 2) {
+    console.log("El valor de i es: " + i);
+    i--;
+}
+
+
+
+Escribe un código en JavaScript que le pregunte a los usuarios cuánto es 2 + 2. Si responden bien, 
+mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
+
+console.log('cuánto es 2 + 2');
+var numerouno = prompt('introduce respuesta');
+if (numerouno == 4) {
+    console.log("excelente es 4 si señor");
+} else {
+    console.log('de nuevo cuánto es 2 + 2');
+    var numerouno = prompt('introduce respuesta');    
+    if (numerouno == 4) {
+        console.log("excelente es 4 si señor");
+    } else {
+        console.log('de nuevo cuánto es 2 + 2');
+        var numerouno = prompt('introduce respuesta');    
+    }
+}
+
+
+
+
+¿Qué es un array?
+vector de valores almacenado en memoria
+
+¿Qué es un objeto?
+nu se jejej una representacion del mundo real en codigo creo
+
+
+¿Cuándo es mejor usar objetos o arrays?
+cuando se necesitan indices o mejor especificacion de usabilidad como lo permiten los objetos
+
+¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+si se puede
+
+
+
+
+2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
+
+var sofiamolina = [
+    'pelo_largo',
+    'roblox',
+    'gafitas',
+    'ojos',
+    'zapatos',
+    'bestidos'
+];
+
+function sofia(sofiamolina){
+    console.log(sofiamolina[0]);
+}
+
+sofia(sofiamolina[0]);
+
+
+
+3️⃣ Crea una función que pueda recibir cualquier array como parámetro 
+e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+
+function listado(sofiamolina) {
+    for (const valores of sofiamolina) {
+        console.log(valores);
+    }
+}
+
+listado(sofiamolina);
+
+
+
+
+4️⃣ Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos 
+sus elementos uno por uno (no se vale imprimir el objeto completo).
+
+var objetoejemplo = [
+    {
+        lenguaje   :   'javscript',
+        nivel     :   'master'
+    },
+    {
+        lenguaje   :   'node',
+        nivel     :   'vikingo'
+    },
+    {
+        lenguaje   :   'php',
+        nivel     :   'master'
+    },
+    {
+        lenguaje   :   'laravel',
+        nivel     :   'master'
+    },
+    {
+        lenguaje   :   'c#',
+        nivel     :   'God'
+    },
+    {
+        lenguaje   :   'asembler',
+        nivel     :   'prime God'
+    },
+];
+
+
+function listobj(objetoejemplo) {
+    for (const valores of objetoejemplo) {
+        console.log(valores.lenguaje);
+        console.log(valores.nivel);
+    }
+}
+
+listado(objetoejemplo);
+
+
+
+---------- PROMEDIOS
+
+MEDIA ARITMETICA
+
+ (VALOR + VALOR + VALOR) / Cantidad_Valores
+
+
+MEDIANA
+
+VALOR + (VALOR + VALOR) + VALOR / Cantidad_Valores
+
+
+MODA
+1, 10, 14, 3, 24, 14, 10, 35, 13, 14
+= 14 
+= 10 
+
