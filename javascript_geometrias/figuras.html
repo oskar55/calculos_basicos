@@ -7,9 +7,31 @@
     <title>Calcular medidas en figuras geometricas</title>
 </head>
 <body>
-    <h1>
-        Figuras Geometricas.
-    </h1>
+    <header>
+        <h1>
+            Figuras Geometricas.
+        </h1>
+        <p>calcular caracteristicas de figuras geometricas</p>
+    </header>
+
+    <section>
+        <h2>Calcular Area y perimetro de un cuadrado</h2>
+
+        <form>
+            <label for="InputCuadrado">medidas de cada lado del cuadraro</label>
+            
+            <input id="InputCuadrado" type="number">
+
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular perímetro
+            </button>
+            
+            <button type="button" onclick="calcularAreaCuadrado()">
+                Calcular Área
+            </button>
+
+        </form>
+    </section>
     
     <script src="./figuras.js"></script>
 </body>

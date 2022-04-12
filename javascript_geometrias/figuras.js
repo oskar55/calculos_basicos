@@ -16,7 +16,18 @@ console.groupEnd();
 // CODIGO DEL TRIANGULO
 console.group("Triangulo");   
 
-    function perimetroTriangulo(lado1, lado2, base){
+    function alturaTrianguloIsoseles(lado1, lado2, base){
+
+        if (lado1 == lado2 || lado1 == base || lado2 == base) {
+            
+            const altura = (Math.sqrt((lado1 * lado2) - (base * base)/4 ));
+
+            // retornar altura isoseles
+            return altura;
+        }
+    };
+
+    function perimetroTriangulo(lado1, lado2, base){     
         return lado1 + lado2 + base;
     };
 
@@ -26,6 +37,8 @@ console.group("Triangulo");
     }
 
 console.groupEnd();
+
+
 
 
 // CODIGO DEL CIRCULO
@@ -51,3 +64,26 @@ console.group("Circulo");
     }
 
 console.groupEnd();
+
+
+
+// INTERACCION CON EL CODIGO HTML
+
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+
+    alert(perimetro);
+
+}
+
+function calcularAreaCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const area = areaCuadrado(value);
+
+    alert(area);
+}
